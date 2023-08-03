@@ -1,1 +1,8 @@
-select * from student;
+ALTER TABLE Mark DROP CONSTRAINT MarkStudentFk;
+ALTER TABLE Mark ADD CONSTRAINT MarkStudentFk FOREIGN KEY (student_id) REFERENCES Student(id) ON DELETE CASCADE;
+
+ALTER TABLE Payment DROP CONSTRAINT PaymentStudentFk;
+ALTER TABLE Payment ADD CONSTRAINT PaymentStudentFk FOREIGN KEY (student_id) REFERENCES Student(id) ON DELETE CASCADE;
+
+ALTER TABLE Payment DROP CONSTRAINT PaymentPaymentTypeFk;
+ALTER TABLE Payment ADD CONSTRAINT PaymentPaymentTypeFk FOREIGN KEY (type_id) REFERENCES PaymentType(id) ON DELETE CASCADE;
