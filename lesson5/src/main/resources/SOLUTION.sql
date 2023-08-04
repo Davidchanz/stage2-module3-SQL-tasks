@@ -10,7 +10,7 @@ SELECT * FROM Payment WHERE payment_date > DATEADD(MONTH, -8, '20230101');
 
 SELECT * FROM Student WHERE name LIKE 'A%';
 
-SELECT * FROM Student WHERE (name = 'Roxi' AND groupnumber = 4) OR (name = 'Tallie' AND groupnumber = 9);
+SELECT * FROM Student WHERE (name LIKE 'Roxi%' AND groupnumber = 4) OR (name LIKE 'Tallie%' AND groupnumber = 9);
 
 
 
